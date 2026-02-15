@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Mail } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import davidImg from "@/assets/david-profile.jpg";
+import davidImg from "@/assets/davi-tech.png";
 
 const HeroSection = () => (
   <section
