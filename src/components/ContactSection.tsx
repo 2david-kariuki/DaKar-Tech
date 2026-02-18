@@ -60,7 +60,7 @@ const ContactSection = () => {
 
             <div className="pt-6">
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Davi Tech delivers custom digital systems and professional web solutions for institutions, businesses, and professionals. Focused on reliability, scalability, and strategic collaboration.
+                DaKar-Tech delivers custom digital systems and professional web solutions for institutions, businesses, and professionals. Focused on reliability, scalability, and strategic collaboration.
               </p>
             </div>
           </div>

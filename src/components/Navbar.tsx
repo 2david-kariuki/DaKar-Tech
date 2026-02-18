@@ -16,10 +16,7 @@ const Navbar = () => {
   const scrollToHash = (href: string) => {
     const el = document.querySelector(href);
     if (!el) return;
-
     el.scrollIntoView({ behavior: "smooth", block: "start" });
-    // keep URL in sync (optional)
-    window.history.replaceState(null, "", href);
   };
 
   const handleNavClick = (
@@ -29,28 +26,39 @@ const Navbar = () => {
   ) => {
     e.preventDefault();
 
-    // Close mobile menu first (if needed)
-    if (closeMobile) setOpen(false);
+    // Update URL hash so navigation reflects section
+    window.location.hash = href;
 
-    // Defer scroll until after state update/unmount starts
-    requestAnimationFrame(() => scrollToHash(href));
+    if (closeMobile) {
+      setOpen(false);
+
+      // wait for mobile menu close animation
+      setTimeout(() => scrollToHash(href), 120);
+      return;
+    }
+
+    scrollToHash(href);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-md border-b border-primary-foreground/10">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
+        
+        {/* Logo */}
         <a
           href="#"
           className="font-heading text-xl font-bold text-primary-foreground tracking-tight"
           onClick={(e) => {
             e.preventDefault();
-            requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+            requestAnimationFrame(() =>
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            );
           }}
         >
-          Davi<span className="text-accent">Tech</span>
+          DaKar<span className="text-accent">-Tech</span>
         </a>
 
-        {/* Desktop */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <a
@@ -73,7 +81,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile Toggle */}
         <button
           onClick={() => setOpen((v) => !v)}
           className="md:hidden text-primary-foreground"
@@ -84,7 +92,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div

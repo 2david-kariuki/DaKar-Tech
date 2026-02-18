@@ -20,8 +20,8 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
             Technology Solutions You Can Trust
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Davi Tech is an independent technology solutions provider focused on designing and developing scalable digital platforms for institutions, businesses, and professionals.
+          <p className="text-muted-foreground text-lg leadin  g-relaxed mb-4">
+           DaKar-Tech is an independent technology solutions provider focused on designing and developing scalable digital platforms for institutions, businesses, and professionals.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
             With extensive hands-on experience in full-stack development, Davi Tech builds secure, reliable, and performance-driven systems tailored to operational needs.

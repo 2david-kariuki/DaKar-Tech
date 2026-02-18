@@ -13,17 +13,13 @@ const HeroSection = () => (
 
     <div className="container mx-auto relative z-10 px-4 py-32 grid md:grid-cols-2 gap-12 items-center">
       {/* Text */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
+      <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary-foreground leading-tight mb-6">
-          Smart Digital Systems & Professional Websites{" "}
-          <span className="text-accent">Built for Growth</span>
+          Smart Digital Systems & Professional Websites <span className="text-accent">Built for Growth</span>
         </h1>
         <p className="text-lg text-primary-foreground/70 mb-8 max-w-lg leading-relaxed">
-          Davi Tech delivers school systems, church management platforms, hospital solutions, POS systems, professional business websites, and custom portfolios for professionals.
+          DaKar-Tech delivers school systems, church management platforms, hospital solutions, POS systems, professional
+          business websites, and custom portfolios for professionals.
         </p>
         <div className="flex flex-wrap gap-4">
           <a
@@ -43,19 +39,19 @@ const HeroSection = () => (
         </div>
       </motion.div>
 
-      {/* Image */}
+      {/* Image (NOW VISIBLE ON MOBILE) */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="hidden md:flex justify-center"
+        className="flex justify-center"
       >
-        <div className="relative">
+        <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md">
           <div className="absolute -inset-4 rounded-2xl bg-accent/20 blur-2xl" />
           <img
             src={davidImg}
-            alt="David Kariuki — Founder of Davi Tech"
-            className="relative rounded-2xl w-80 lg:w-96 object-cover shadow-[var(--shadow-elegant)]"
+            alt="David Kariuki — Founder of DaKar-Tech"
+            className="relative w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]"
           />
         </div>
       </motion.div>

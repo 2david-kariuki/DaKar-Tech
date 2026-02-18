@@ -21,7 +21,7 @@ const CollaborationSection = () => {
             Technology Partnerships & Project Collaboration
           </h2>
           <p className="text-primary-foreground/70 text-lg leading-relaxed">
-            Davi Tech collaborates with organizations and development teams on ongoing and large-scale projects. Services include backend development support, system architecture design, API integration, database optimization, feature expansion, and long-term maintenance.
+            DaKar-Tech collaborates with organizations and development teams on ongoing and large-scale projects. Services include backend development support, system architecture design, API integration, database optimization, feature expansion, and long-term maintenance.
           </p>
         </motion.div>
       </div>

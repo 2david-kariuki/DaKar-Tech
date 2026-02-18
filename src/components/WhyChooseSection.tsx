@@ -21,7 +21,7 @@ const WhyChooseSection = () => {
         <div className="text-center mb-16">
           <span className="text-accent font-semibold text-sm uppercase tracking-widest mb-3 block">Why Us</span>
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-            Why Choose Davi Tech
+            Why Choose DaKar-Tech
           </h2>
         </div>
 
